@@ -1,0 +1,155 @@
+/* ==========================================================================
+   1. GLOBAL STYLES (Cascading Behavior)
+   Applying base styles to the body to ensure consistency across all pages.
+   ========================================================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6; /* Global background color */
+    color: #333;               /* Global text color */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================================================
+   2. REUSABLE BOX MODEL CLASSES
+   Refactoring repetitive styles into one class for scalability.
+   ========================================================================== */
+.box-container {
+    background-color: #ffffff;
+    border: 1px solid #ddd;    /* Border: Defines the box edge */
+    padding: 20px;             /* Padding: Space inside the box */
+    margin: 20px auto;         /* Margin: Space outside the box */
+    max-width: 1000px;         /* Keeps content readable on wide screens */
+    border-radius: 8px;
+}
+
+/* ==========================================================================
+   3. FLEXBOX NAVIGATION BAR
+   Creating a responsive nav that works across home, about, and contact pages.
+   ========================================================================== */
+.navbar {
+    background-color: #2c3e50;
+    padding: 10px 0;
+}
+
+.nav-links {
+    display: flex;               /* Enable Flexbox for layout */
+    justify-content: center;     /* Horizontal alignment: centers the links */
+    align-items: center;         /* Vertical alignment: centers links in the bar */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;                   /* Gap: Consistent spacing between items */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 15px;
+    transition: 0.3s;
+}
+
+/* Highlight the active navigation link */
+.nav-links a.active {
+    background-color: #3498db;   /* Visual highlight for current page */
+    border-radius: 4px;
+    color: white;
+}
+
+/* ==========================================================================
+   4. FLEXBOX CONTENT CARDS (Used in Projects/Home)
+   Aligning multiple content cards in rows.
+   ========================================================================== */
+.card-container {
+    display: flex;               /* Parent container flex context */
+    flex-wrap: wrap;             /* Allows items to move to next line on small screens */
+    justify-content: center;     /* Centers cards within the section */
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 280px;             /* Flex-basis: sets a minimum width of 280px */
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* ==========================================================================
+   5. SHARED FOOTER
+   Consistent layout across all pages.
+   ========================================================================== */
+footer {
+    text-align: center;          /* Centers the copyright text */
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 40px;            /* Margin to separate footer from main content */
+}
+
+/* ==========================================================================
+   6. RESPONSIVENESS (Media Queries)
+   Testing device simulation to ensure mobile-friendly alignment.
+   ========================================================================== */
+@media (max-width: 600px) {
+    .nav-links {
+        flex-direction: column;  /* Stack links vertically on mobile */
+        gap: 15px;
+    }
+    
+    .box-container {
+        margin: 10px;            /* Reduce margins for smaller screens */
+    }
+}
+/* --- SKILLS SECTION STYLING --- */
+#skills {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.skill-item {
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+/* The background bar (Box Model: Border & Padding) */
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    height: 12px;
+    width: 100%;
+    overflow: hidden; /* Ensures the fill stays inside the rounded corners */
+}
+
+/* The moving fill (Color & Width) */
+.progress-fill {
+    background-color: #3498db; /* Matching your theme's blue */
+    height: 100%;
+    border-radius: 20px;
+    transition: width 1s ease-in-out; /* Makes it look smooth when the page loads */
+}
+.hero {
+    text-align: center;       /* Centers the text */
+    padding: 60px 20px;       /* Adds space above and below the text */
+    background-color: #f8f9fa; 
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+}
