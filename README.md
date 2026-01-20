@@ -1,8 +1,11 @@
 🚀 Professional Web Development Portfolio
+
 Internship Task 4: Multi-Page Responsive Website
+
 This repository contains a fully functional, three-page website developed as part of my web development internship. The project demonstrates a transition from basic HTML to a scalable, professional architecture.
 
 📁 Project Structure
+
 Following professional best practices for scalability, the project is organized into a clean directory system:
 
 Root: Contains home.html, about.html, and contact.html.
@@ -10,6 +13,7 @@ Root: Contains home.html, about.html, and contact.html.
 /css: Contains style.css to manage global styles across all pages.
 
 🛠️ Key Technical Features
+
 Multi-Page Navigation: Implemented a consistent navigation bar and footer across all pages using relative paths.
 
 Active Link Highlighting: Used CSS classes to provide visual feedback, indicating which page is currently active in the navigation menu.
